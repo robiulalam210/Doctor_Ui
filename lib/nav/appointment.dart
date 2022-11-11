@@ -149,6 +149,8 @@ class Appointment extends StatelessWidget {
 
                                           CircleAvatar(
                                             maxRadius: 25,
+                                            backgroundImage:AssetImage("images/3.png"),
+
                                           ),
                                           SizedBox(
                                             width: MediaQuery.of(context)
