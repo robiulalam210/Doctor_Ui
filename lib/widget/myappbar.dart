@@ -7,7 +7,7 @@ class MyAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(14),
+      padding: EdgeInsets.all(10),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
@@ -18,6 +18,8 @@ class MyAppBar extends StatelessWidget {
           CircleAvatar(
             maxRadius: 35,
             minRadius: 25,
+            backgroundImage:AssetImage("images/6.png"),
+
           )
         ],
       ),

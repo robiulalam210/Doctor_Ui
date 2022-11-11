@@ -16,7 +16,7 @@ class GridViewItem extends StatelessWidget {
                 gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                     mainAxisSpacing: 8,
                     crossAxisSpacing: 8,
-                    maxCrossAxisExtent: 300),
+                    maxCrossAxisExtent: 290),
                 itemBuilder: (context, index) => InkWell(
                   onTap: (){ Navigator.of(context)
                       .push(MaterialPageRoute(builder: (context) => Appointment()));},
@@ -25,12 +25,12 @@ class GridViewItem extends StatelessWidget {
                         borderRadius: BorderRadius.circular(14),
                         color: Colors.black.withOpacity(0.3)),
                     padding: EdgeInsets.all(6),
-                    height: MediaQuery.of(context).size.height * 0.16,
+                    height: MediaQuery.of(context).size.height * 0.02,
                     child: Column(
                       children: [
                         CircleAvatar(
                           maxRadius: 35,
-                          backgroundColor: Colors.white70,
+                          backgroundImage:AssetImage("images/2.png"),
                         ),
                         SizedBox(
                           height:MediaQuery.of(context).size.height * 0.01,
@@ -43,13 +43,16 @@ class GridViewItem extends StatelessWidget {
                         SizedBox(
                           height:MediaQuery.of(context).size.height * 0.01,
                         ),
-                        Text(
-                          "Pediatrician",
-                          style: GoogleFonts.nunito(
-                              fontSize: 16, fontWeight: FontWeight.w700),
-                        ),
-                        SizedBox(height: MediaQuery.of(context).size.height * 0.01,),
-                        Text("⭐ 6.5",style: GoogleFonts.nunito(fontSize: 20),)
+                        Row(children: [
+                          Text(
+                            "Pediatrician",
+                            style: GoogleFonts.nunito(
+                                fontSize: 16, fontWeight: FontWeight.w700),
+                          ),
+                          SizedBox(width: MediaQuery.of(context).size.width * 0.01,),
+                          Text("⭐ 6.5",style: GoogleFonts.nunito(fontSize: 18),)
+                        ],)
+
                       ],
                     ),
                   ),
